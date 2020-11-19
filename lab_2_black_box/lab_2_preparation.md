@@ -33,8 +33,8 @@ Equivalence Class Partioning:
 - <b>impossible</b> - if the given side lengths do not form a triangle
 
 #### Classes
-| Class | Type | Description |
-| ----- | ---- | ----------- |
+| Class | Type | Description | Example Value |
+| ----- | ---- | ----------- | -------------- |
 | C1 | Input | 3 sides of equal length |
 | C2 | Input | 2 sides of equal length |
 | C3 | Input | All sides of different lengths| 
@@ -52,35 +52,35 @@ Equivalence Class Partioning:
 
 #### Test Cases EP
 
-| EP Test Case Equilateral | Input | Output |
-| ----- | ---- | ----------- |
-| TC1 | C1 | true |
-| TC2 | C2 | false |
-| TC3 | C6 | ?? | 
+| EP Test Case Equilateral | Input | Output | Done | Invalid? |
+| ----- | ---- | ----------- | --- | --- |
+| TC1 | C1 | true | x | |
+| TC2 | C2 | false | x | |
+| TC3 | C6 | ?? | x | x |
 
-| EP Test Case Isosceles | Input | Output |
-| ----- | ---- | ----------- |
-| TC1 | C2 | true |
-| TC2 | C3 | false |
-| TC3 | C6 | ?? | 
+| EP Test Case Isosceles | Input | Output | Done | Invalid? |
+| ----- | ---- | ----------- | --- | --- |
+| TC1 | C2 | true | x | |
+| TC2 | C3 | false | x | |
+| TC3 | C6 | ?? | x | x |
 
 | EP Test Case Scalene | Input | Output |
-| ----- | ---- | ----------- |
-| TC1 | C3 | true |
-| TC2 | C1 | false |
-| TC3 | C6 | ?? | 
+| ----- | ---- | ----------- | --- |
+| TC1 | C3 | true | x |
+| TC2 | C1 | false | x |
+| TC3 | C6 | ?? | x |
 
 | EP Test Case Impossible | Input | Output |
 | ----- | ---- | ----------- |
-| TC1 | C4 | true |
-| TC2 | C1 | false |
-| TC3 | C6 | ?? | 
+| TC1 | C4 | true | x |
+| TC2 | C1 | false | x |
+| TC3 | C6 | ?? | x |
 
 | EP Test Case Right-Angled | Input | Output |
-| ----- | ---- | ----------- |
-| TC1 | C5 | true |
-| TC2 | C1 | false |
-| TC3 | C6 | ?? | 
+| ----- | ---- | ----------- | --- |
+| TC1 | C5 | true | x |
+| TC2 | C1 | false | x |
+| TC3 | C6 | ?? | x |
 
 | EP Test Case Area | Input | Output |
 | ----- | ---- | ----------- |
