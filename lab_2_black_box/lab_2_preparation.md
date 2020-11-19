@@ -39,17 +39,71 @@ Equivalence Class Partioning:
 | C2 | Input | 2 sides of equal length |
 | C3 | Input | All sides of different lengths| 
 | C4 | Input | Lengths does not form a triangle |
-| C5 | Output | "Equilateral" |
-| C6 | Output | "Isosceles" |
-| C7 | Output | "Scalene" |
-| C8 | Output | "Impossible" |
-| C9 | Output | "Right-Angled" |
-| C10 | Output | -1 |
-| C11 | Output | Area of the triangle [number] |
-| C12 | Output | Perimeter of the triangle [number] |
-| C13 | Output | Triangle |
-| C14 | Output | 3 sides' length [string] |
-| C15 | Output | true |
-| C16 | Output | false |
+| C5 | Input | Lengths forms a right angle |
+| C6 | Input | Triangle with negative sides |
+| C7 | Input | String as side length |
+| C8 | Output | "Equilateral" |
+| C9 | Output | "Isosceles" |
+| C10 | Output | "Scalene" |
+| C11 | Output | "Impossible" |
+| C12 | Output | "Right-Angled" |
+| C13 | Output | -1 |
+| C14 | Output | Area of the triangle [number] |
+| C15 | Output | Perimeter of the triangle [number] |
+| C16 | Output | Triangle |
+| C17 | Output | 3 sides' length [string] |
+| C18 | Output | true |
+| C19 | Output | false |
 
-#### Test Cases
+#### Test Cases EP
+
+| EP Test Case Equilateral | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C1 | true |
+| TC2 | C2 | false |
+| TC3 | C6 | ?? | 
+
+| EP Test Case Isosceles | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C2 | true |
+| TC2 | C3 | false |
+| TC3 | C6 | ?? | 
+
+| EP Test Case Scalene | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C3 | true |
+| TC2 | C1 | false |
+| TC3 | C6 | ?? | 
+
+| EP Test Case Impossible | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C4 | true |
+| TC2 | C1 | false |
+| TC3 | C6 | ?? | 
+
+| EP Test Case Right-Angled | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C5 | true |
+| TC2 | C1 | false |
+| TC3 | C6 | ?? | 
+
+| EP Test Case Area | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C5 | [0-inf]|
+| TC2 | C4 | -1 |
+| TC3 | C6 | ?? | 
+| TC4 | C7 | ?? | 
+
+| EP Test Case Parameter | Input | Output |
+| ----- | ---- | ----------- |
+| TC1 | C5 | [0-inf]|
+| TC2 | C4 | -1 |
+| TC3 | C6 | ?? | 
+| TC4 | C7 | ?? | 
+
+
+
+#### Test Cases BVA 
+
+In this case the BVA equivalent would be pretty mutch the same but with values specified closer to the diffrent borders.  
+
