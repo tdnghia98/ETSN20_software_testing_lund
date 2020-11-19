@@ -17,6 +17,11 @@ import org.junit.Test;
 public class TriangleTest {
 
 	private Triangle rightAngledTriangle;
+	private Triangle impossibleTriangle;
+	private Triangle isoscelesTriangle;
+	private Triangle scaleneTriangle;
+	private Triangle ordineryTriangle;
+	private Triangle equilateralTriangle;
 
 	
 	@BeforeClass
@@ -40,6 +45,7 @@ public class TriangleTest {
 	 */
 	public void setUp() throws Exception {
 		rightAngledTriangle = new Triangle(3, 4, 5);
+
 	}
 
 	@After

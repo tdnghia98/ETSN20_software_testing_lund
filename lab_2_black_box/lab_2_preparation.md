@@ -42,18 +42,13 @@ Equivalence Class Partioning:
 | C5 | Input | Lengths forms a right angle |
 | C6 | Input | Triangle with negative sides |
 | C7 | Input | String as side length |
-| C8 | Output | "Equilateral" |
-| C9 | Output | "Isosceles" |
-| C10 | Output | "Scalene" |
-| C11 | Output | "Impossible" |
-| C12 | Output | "Right-Angled" |
-| C13 | Output | -1 |
-| C14 | Output | Area of the triangle [number] |
-| C15 | Output | Perimeter of the triangle [number] |
-| C16 | Output | Triangle |
-| C17 | Output | 3 sides' length [string] |
-| C18 | Output | true |
-| C19 | Output | false |
+| C8 | Output | -1 |
+| C9 | Output | Area of the triangle [number] |
+| C10 | Output | Perimeter of the triangle [number] |
+| C11 | Output | Triangle |
+| C12 | Output | 3 sides' length [string] |
+| C13 | Output | true |
+| C14 | Output | false |
 
 #### Test Cases EP
 
