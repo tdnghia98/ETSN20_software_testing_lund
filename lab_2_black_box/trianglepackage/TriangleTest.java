@@ -1,12 +1,13 @@
 package trianglepackage;
 
 import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.*;
 
 import jdk.jfr.Timestamp;
 
@@ -93,23 +94,8 @@ public class TriangleTest {
 		assertTrue("Should return true for a right-angled triangle",
 							rightAngledTriangle.isRightAngled());
 		assertFalse("Should return false for a right-angled triangle",
-		isoscelesTriangle.isImpossible());
-		assertEquals("Should return 'right-angled'", "right-angled", rightAngledTriangle.classify());		
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.isRightAngled();
-		});
+				rightAngledTriangle.isImpossible());
+		
 	}
 
 
@@ -120,69 +106,40 @@ public class TriangleTest {
 							equilateralTriangle.isEquilateral());
 		assertFalse("Should return false for an equilateral triangle",
 		equilateralTriangle.isImpossible());
-		assertEquals("Should return 'equilateral'", "equilateral", equilateralTriangle.classify());
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isEquilateral();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.isEquilateral();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.isEquilateral();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.isEquilateral();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.isEquilateral();
-		});
+	
 
+	}
+	
+	
+	@Test 
+	public void throwTest() {
+		assertThrows(Exception.class, () -> {
+			negativeTriangle.isRightAngled();
+		});
+		assertThrows(Exception.class, () -> {
+			zeroSideTriangle.isRightAngled();
+		});
+		assertThrows(Exception.class, () -> {
+			oneSideTriangle.isRightAngled();
+		});
+		assertThrows(Exception.class, () -> {
+			infinitySideTriangle.isRightAngled();
+		});
+		assertThrows(Exception.class, () -> {
+			boudaryNegativeTriangle.isRightAngled();
+		});
 	}
 	
 	@Test
 	public void testIsosceles(){
-		assertTrue("Should return true for a Isosceles triangle",
-							isoscelesTriangle.isIsosceles());
-		assertFalse("Should return false for a Isosceles triangle",
-							isoscelesTriangle.isImpossible());
-		assertEquals("Should return 'isosceles'", "isosceles", isoscelesTriangle.classify());
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isImpossible();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.isImpossible();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.isImpossible();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.isImpossible();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.isImpossible();
-		});
+		assertTrue("Should return true for a Isosceles triangle", isoscelesTriangle.isIsosceles());
+		assertFalse("Should return false for a Isosceles triangle", isoscelesTriangle.isImpossible());
 	}
 
 	@Test
 	public void testImpossible(){
-		assertTrue("Should return true for a Impossible triangle",
-	            impossibleTriangle.isImpossible());
-		assertEquals("Should return 'impossible'", "impossible", impossibleTriangle.classify());
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isImpossible();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.isRightAngled();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.isRightAngled();
-		});
+		assertTrue("Should return true for a Impossible triangle, returned"+impossibleTriangle.isImpossible(), impossibleTriangle.isImpossible());
+	
 	}
 
 	@Test
@@ -191,64 +148,21 @@ public class TriangleTest {
 							scaleneTriangle.isScalene());
 		assertFalse("Should return false for a scalene triangle",
 		scaleneTriangle.isImpossible());
-		assertEquals("Should return 'scalene'", "scalene", scaleneTriangle.classify());
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isScalene();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.isScalene();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.isScalene();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.isScalene();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.isScalene();
-		});
+	
 	}
 
 	@Test
 	public void testArea(){
-		assertTrue("Should return 6 for a 3,4,5 ", rightAngledTriangle.getArea() == 6);
-		assertTrue("Should return -1 for a impossible triangle ", impossibleTriangle.getArea() == -1);
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isScalene();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.getArea();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.getArea();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.getArea();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.getArea();
-		});
+		assertTrue("Should return 6 for a 3,4,5 returned "+rightAngledTriangle.getArea(), rightAngledTriangle.getArea() == 6);
+		assertTrue("Should return -1 for a impossible triangle, returned "+impossibleTriangle.getArea(), impossibleTriangle.getArea() == -1);
+	
 	}
 	
 	@Test
 	public void testParameter(){
-		assertTrue("Should return 12 for a 3,4,5 triangle", rightAngledTriangle.getPerimeter() == 6);
-		assertTrue("Should return -1 for a impossible triangle ", impossibleTriangle.getPerimeter() == -1);
-		assertThrow(Exception.class, () -> {
-			negativeTriangle.isScalene();
-		});
-		assertThrow(Exception.class, () -> {
-			zeroSideTriangle.getPerimeter();
-		});
-		assertThrow(Exception.class, () -> {
-			oneSideTriangle.getPerimeter();
-		});
-		assertThrow(Exception.class, () -> {
-			infinitySideTriangle.getPerimeter();
-		});
-		assertThrow(Exception.class, () -> {
-			boudaryNegativeTriangle.getPerimeter();
-		});
+		assertTrue("Should return 12 for a 3,4,5 triangle, returned "+rightAngledTriangle.getPerimeter(), rightAngledTriangle.getPerimeter() == 6);
+		assertTrue("Should return -1 for a impossible triangle, returned "+impossibleTriangle.getPerimeter(), impossibleTriangle.getPerimeter() == -1);
+	
 	}
 
 }
