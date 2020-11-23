@@ -94,7 +94,7 @@ public class TriangleTest {
 		assertTrue("Should return true for a right-angled triangle",
 							rightAngledTriangle.isRightAngled());
 		assertFalse("Should return false for a right-angled triangle",
-				rightAngledTriangle.isImpossible());
+				impossibleTriangle.isRightAngled());
 		
 	}
 
@@ -105,7 +105,7 @@ public class TriangleTest {
 		assertTrue("Should return true for an equilateral triangle",
 							equilateralTriangle.isEquilateral());
 		assertFalse("Should return false for an equilateral triangle",
-		equilateralTriangle.isImpossible());
+		scaleneTriangle.isEquilateral());
 	
 
 	}
@@ -155,7 +155,6 @@ public class TriangleTest {
 	public void testArea(){
 		assertTrue("Should return 6 for a 3,4,5 returned "+rightAngledTriangle.getArea(), rightAngledTriangle.getArea() == 6);
 		assertTrue("Should return -1 for a impossible triangle, returned "+impossibleTriangle.getArea(), impossibleTriangle.getArea() == -1);
-	
 	}
 	
 	@Test
@@ -165,4 +164,25 @@ public class TriangleTest {
 	
 	}
 
+	//BVA tests
+
+	@Test 
+	public void areaOfZeroSide(){
+		assertTrue("Should return -1 for a zero sided triangle, returned "+zeroSideTriangle.getArea(), zeroSideTriangle.getArea() == -1);
+	}
+
+	@Test 
+	public void areaOfInfinitSide(){
+		assertTrue("Should return -1 for a inf sided triangle, returned "+infinitySideTriangle.getArea(), infinitySideTriangle.getArea() == Integer.MAX_VALUE);
+	}
+
+	@Test 
+	public void parameterOfZeroSide(){
+		assertTrue("Should return -1 for a zero sided triangle, returned "+zeroSideTriangle.getPerimeter(), zeroSideTriangle.getPerimeter() == -1);
+	}
+
+	@Test 
+	public void parameterOfInfinitSide(){
+		assertTrue("Should return -1 for a inf sided triangle, returned "+infinitySideTriangle.getPerimeter(), infinitySideTriangle.getPerimeter() == Integer.MAX_VALUE);
+	}
 }

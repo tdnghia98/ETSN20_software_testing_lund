@@ -1,0 +1,42 @@
+;ReqSimile 1.2
+[DB]
+tokenTable=rsTokens
+
+[DB_A]
+URL=jdbc:odbc:;Driver={Microsoft Access Driver (*.mdb)};DBQ=SPOTS.mdb
+name=SPOTS A
+driverURL=
+driverClassName=sun.jdbc.odbc.JdbcOdbcDriver
+userName=
+password=
+table=SPOTS_A
+summaryFields=[Id, Section]
+detailFields=[Id, Type, Section, Description]
+calcFields=[Section, Description]
+tokenFreqTable=rsTokenWeightsA
+keyField=Key
+
+[DB_B]
+name=SPOTS B
+driverURL=
+driverClassName=sun.jdbc.odbc.JdbcOdbcDriver
+URL=jdbc:odbc:;Driver={Microsoft Access Driver (*.mdb)};DBQ=SPOTS.mdb
+userName=
+password=
+table=SPOTS_B
+summaryFields=[Id, Section]
+detailFields=[Id, Type, Section, Description]
+calcFields=[Section, Description]
+tokenFreqTable=rsTokenWeightsB
+keyField=Key
+
+[LINKS]
+driverURL=
+driverClassName=sun.jdbc.odbc.JdbcOdbcDriver
+URL=jdbc:odbc:;Driver={Microsoft Access Driver (*.mdb)};DBQ=SPOTS.mdb
+userName=
+password=
+table=Links
+linksFieldA=A_key
+linksFieldB=B_Key
+

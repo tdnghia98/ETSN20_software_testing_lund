@@ -56,45 +56,46 @@ Equivalence Class Partioning:
 | ----- | ---- | ----------- | --- | --- |
 | TC1 | C1 | true | x | |
 | TC2 | C2 | false | x | |
-| TC3 | C6 | ?? | x | x |
+
 
 | EP Test Case Isosceles | Input | Output | Done | Invalid? |
 | ----- | ---- | ----------- | --- | --- |
-| TC1 | C2 | true | x | |
-| TC2 | C3 | false | x | |
-| TC3 | C6 | ?? | x | x |
+| TC3 | C2 | true | x | |
+| TC4 | C3 | false | x | |
+
 
 | EP Test Case Scalene | Input | Output |
 | ----- | ---- | ----------- | --- |
-| TC1 | C3 | true | x |
-| TC2 | C1 | false | x |
-| TC3 | C6 | ?? | x |
+| TC5 | C3 | true | x |
+| TC6 | C1 | false | x |
+
 
 | EP Test Case Impossible | Input | Output |
 | ----- | ---- | ----------- |
 | TC1 | C4 | true | x |
 | TC2 | C1 | false | x |
-| TC3 | C6 | ?? | x |
+
 
 | EP Test Case Right-Angled | Input | Output |
 | ----- | ---- | ----------- | --- |
 | TC1 | C5 | true | x |
 | TC2 | C1 | false | x |
-| TC3 | C6 | ?? | x |
+
+
+#### INSERT BVA TEST CASES FOR PARAMETER AND AREA
 
 | EP Test Case Area | Input | Output |
 | ----- | ---- | ----------- |
 | TC1 | C5 | [0-inf]|
 | TC2 | C4 | -1 |
-| TC3 | C6 | ?? | 
-| TC4 | C7 | ?? | 
+
 
 | EP Test Case Parameter | Input | Output |
 | ----- | ---- | ----------- |
 | TC1 | C5 | [0-inf]|
 | TC2 | C4 | -1 |
-| TC3 | C6 | ?? | 
-| TC4 | C7 | ?? | 
+
+ 
 
 
 
