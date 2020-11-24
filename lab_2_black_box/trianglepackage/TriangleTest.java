@@ -174,6 +174,16 @@ public class TriangleTest {
 		assertTrue("Should return -1 for a impossible triangle, returned "+impossibleTriangle.getPerimeter(), impossibleTriangle.getPerimeter() == -1);
 	
 	}
+	
+	@Test 
+	public void areaOfNegativSideTriangle() {
+		assertTrue("Should return -1 for a impossible triangle, returned "+negativeTriangle.getArea(), negativeTriangle.getArea() == -1);
+	}
+	
+	@Test 
+	public void parameterOfNegativSideTriangle() {
+		assertTrue("Should return -1 for a impossible triangle, returned "+negativeTriangle.getPerimeter(), negativeTriangle.getPerimeter() == -1);
+	}
 
 	//BVA tests
 
