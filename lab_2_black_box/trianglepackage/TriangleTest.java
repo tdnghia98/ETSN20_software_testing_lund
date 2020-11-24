@@ -57,10 +57,10 @@ public class TriangleTest {
 	public void setUp() throws Exception {
 		// EP
 		this.rightAngledTriangle = new Triangle(3, 4, 5);
-		this.impossibleTriangle = new Triangle(1, 2, 2);
-		this.negativeTriangle = new Triangle(-5, 2, 2);
+		this.impossibleTriangle = new Triangle(1, 2, 5);
+		this.negativeTriangle = new Triangle(-5, 3, 4);
 		this.isoscelesTriangle = new Triangle(2, 2, 3);
-		this.scaleneTriangle = new Triangle(1, 2, 3);
+		this.scaleneTriangle = new Triangle(4, 2, 3);
 		this.equilateralTriangle = new Triangle(2, 2, 2); 
 
 		// Boundary Value Analysis for Side length (Input: positive while-number length)
@@ -110,6 +110,13 @@ public class TriangleTest {
 
 	}
 	
+	@Test
+	public void negativeSideTriangleTest_isImpossible() {
+		assertTrue("Should return true for an negative triange returned " + negativeTriangle.isImpossible(),
+							negativeTriangle.isImpossible());
+	}
+	
+	
 	
 	@Test 
 	public void throwTest() {
@@ -138,8 +145,8 @@ public class TriangleTest {
 
 	@Test
 	public void testImpossible(){
-		assertTrue("Should return true for a Impossible triangle, returned"+impossibleTriangle.isImpossible(), impossibleTriangle.isImpossible());
-	
+		assertFalse("Should return false for a valid triangle, returned "+isoscelesTriangle.isImpossible(), isoscelesTriangle.isImpossible());
+		assertTrue("Should return true for a Impossible triangle, returned "+impossibleTriangle.isImpossible(), impossibleTriangle.isImpossible());
 	}
 
 	@Test
@@ -154,12 +161,16 @@ public class TriangleTest {
 	@Test
 	public void testArea(){
 		assertTrue("Should return 6 for a 3,4,5 returned "+rightAngledTriangle.getArea(), rightAngledTriangle.getArea() == 6);
+	}
+	
+	@Test 
+	public void testAreaImpossibleTriangle() {
 		assertTrue("Should return -1 for a impossible triangle, returned "+impossibleTriangle.getArea(), impossibleTriangle.getArea() == -1);
 	}
 	
 	@Test
 	public void testParameter(){
-		assertTrue("Should return 12 for a 3,4,5 triangle, returned "+rightAngledTriangle.getPerimeter(), rightAngledTriangle.getPerimeter() == 6);
+		assertTrue("Should return 12 for a 3,4,5 triangle, returned "+rightAngledTriangle.getPerimeter(), rightAngledTriangle.getPerimeter() == 12);
 		assertTrue("Should return -1 for a impossible triangle, returned "+impossibleTriangle.getPerimeter(), impossibleTriangle.getPerimeter() == -1);
 	
 	}
@@ -183,6 +194,6 @@ public class TriangleTest {
 
 	@Test 
 	public void parameterOfInfinitSide(){
-		assertTrue("Should return -1 for a inf sided triangle, returned "+infinitySideTriangle.getPerimeter(), infinitySideTriangle.getPerimeter() == Integer.MAX_VALUE);
+		assertTrue("Should return Integer max for a inf sided triangle, returned "+infinitySideTriangle.getPerimeter(), infinitySideTriangle.getPerimeter() == Integer.MAX_VALUE);
 	}
 }

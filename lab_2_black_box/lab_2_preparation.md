@@ -50,6 +50,8 @@ Equivalence Class Partioning:
 | C13 | Output | true |
 | C14 | Output | false |
 
+# Test Result
+
 #### Test Cases EP
 
 | EP Test Case Equilateral | Input | Output | Done | Invalid? |
@@ -96,10 +98,4 @@ Equivalence Class Partioning:
 | TC2 | C4 | -1 |
 
  
-
-
-
-#### Test Cases BVA 
-
-In this case the BVA equivalent would be pretty mutch the same but with values specified closer to the diffrent borders.  
 
