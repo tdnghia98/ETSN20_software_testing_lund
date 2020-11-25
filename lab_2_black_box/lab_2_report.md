@@ -104,7 +104,7 @@ The predicate coverage is partly achieved when we have written the branch covera
 
 The path coverage is achieved when both branch and predicate coverage is achieved. This helps us to ensure every possible executions at runtime is tested.
 
-#### Coverage Tool
+#### Coverage Tool (Enclima)
 
 ##### Strength
 
@@ -116,7 +116,7 @@ If the tool can help us achieve full coverage, it is also a distraction. Sometim
 
 Sometimes the tool can be buggy, we got two different coverages on two different machines.
 
-### Blackbox Techniques
+### Black box Techniques
 
 #### EP vs BVA
 
@@ -125,9 +125,11 @@ The EP and BVA are complementary. By combining both techniques, we can be sure t
 In our case,
 Using BVA, we can spot out that the program does not handle correctly the invalid cases. This is also covered with EP but BVA makes it more explicit.
 
-#### Other blackbox testing techniques
+#### Other black box testing techniques
 
 - Combinatorial Testing: should be used when we have interactions with other parameters, for example when the class is used in conjunction with other classes or in different environments such as different OS.
 - State transition testing: when the class includes events, we should include a set of test cases that triggers each event at least once.
 
-### Blackbox vs Whitebox Techniques
+### Black box vs White box Techniques
+
+Sometimes you do not have access to the source code and are not able to do white box tests then you are left out with block box. On the other hand if you have the source code you are likely to do white box tests where you look at your own code and see to it that you cover all the different paths with your tests. So basically the big difference is knowledge of the code coverage. If we are testing a critical program that under no circumstances should fail we would try to do full code coverage and then we need to do some extensive white box testing. Black box are good for finding hidden functionalities and boarder line values so the conclusion is the at we need both for creating a test bed whit good code coverage and good coverage of the functionalities.  
