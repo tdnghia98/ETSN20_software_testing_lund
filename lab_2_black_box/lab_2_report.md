@@ -78,11 +78,56 @@ Faults were found inside three methods:
 | Tests for method getParameter() | Input | Expected Output  | Passes? |
 | ----- | ---- | ----------- | --- |
 | TC15 | C5 | [0-inf]| x |
-| TC16 | C4 | -1 | **NO** | 
+| TC16 | C4 | -1 | **NO** |
 | TC17 | C8 | Integer.MAX_VALUE | x |
 | TC15 | C6 | -1 | **NO** |
 
-## Discussion and conclusion 
+## Discussion and conclusion
 
- 
+### White box techniques
 
+#### Coverage Criterion
+
+##### Statement
+
+Using the statement coverage only cover a small portion of the code since most of the work is to test on condition. This technique only is not sufficient for our program but can be suitable for more straight forward classes that do simple calculations for example (without branching).
+
+##### Branch
+
+Branch coverage takes up most of the test cases written. This is expected as the program mainly test conditions.
+
+##### Predicate
+
+The predicate coverage is partly achieved when we have written the branch coverage but we needed to further identify the predicates and test cases for them.
+
+##### Path
+
+The path coverage is achieved when both branch and predicate coverage is achieved. This helps us to ensure every possible executions at runtime is tested.
+
+#### Coverage Tool
+
+##### Strength
+
+The coverage tool was very useful when developing test cases since it highlights the fully covered, partly covered and uncovered statements. It helped us to spot the cases that we forgot to include, especially on the predicate coverage and on nested function calls (when function A calls function B and use the result to feed function C).
+
+##### Weakness
+
+If the tool can help us achieve full coverage, it is also a distraction. Sometimes the coverage can become a pressure, we only try to reach higher coverage but forget that the testing is also about writing meaningful and delicate test cases. For that we should rely on the control flow chart, the coverage should only be an indicator.
+
+Sometimes the tool can be buggy, we got two different coverages on two different machines.
+
+### Blackbox Techniques
+
+#### EP vs BVA
+
+The EP and BVA are complementary. By combining both techniques, we can be sure to cover the ordinary and and also edge cases. With that said, I feel like the EP test can have more weight since the inputs are logically more likely to be used in real life scenario while BVA test more "impossible" and edge cases where we would expect error.
+
+In our case,
+Using BVA, we can spot out that the program does not handle correctly the invalid cases. This is also covered with EP but BVA makes it more explicit.
+
+#### Other blackbox testing techniques
+
+- Combinatorial Testing: should be used when we have interactions with other parameters, for example when the class is used in conjunction with other classes or in different environments such as different OS.
+- State transition testing: when the class includes events, we should include a set of test cases that triggers each event at least once.
+
+### Blackbox vs Whitebox Techniques
