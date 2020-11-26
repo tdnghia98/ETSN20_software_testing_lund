@@ -117,26 +117,6 @@ public class TriangleTest {
 	}
 	
 	
-	
-	@Test 
-	public void throwTest() {
-		assertThrows(Exception.class, () -> {
-			negativeTriangle.isRightAngled();
-		});
-		assertThrows(Exception.class, () -> {
-			zeroSideTriangle.isRightAngled();
-		});
-		assertThrows(Exception.class, () -> {
-			oneSideTriangle.isRightAngled();
-		});
-		assertThrows(Exception.class, () -> {
-			infinitySideTriangle.isRightAngled();
-		});
-		assertThrows(Exception.class, () -> {
-			boudaryNegativeTriangle.isRightAngled();
-		});
-	}
-	
 	@Test
 	public void testIsosceles(){
 		assertTrue("Should return true for a Isosceles triangle", isoscelesTriangle.isIsosceles());
